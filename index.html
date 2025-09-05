@@ -5,30 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fullscreen Looping Video</title>
     <!-- Tailwind CSS for styling -->
-    <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body {
             font-family: 'Inter', sans-serif;
             overflow: hidden; /* Prevents scrollbars from appearing */
+            background-color: black;
         }
 
-        #background-video {
-            position: fixed;
-            right: 0;
-            bottom: 0;
-            min-width: 100%;
-            min-height: 100%;
-            width: auto;
-            height: auto;
-           /*  z-index: -100; Pushes the video behind other content */
-          /*   object-fit: cover; Ensures the video covers the screen without distortion */
-        }
     </style>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+   
 </head>
-<body class="bg-black">
+<body>
 
     <!-- 
       The 'autoplay' attribute starts the video automatically.
@@ -36,7 +23,7 @@
       The 'muted' attribute is required by most modern browsers for autoplay to work.
       The 'playsinline' attribute is for better compatibility on mobile devices.
     -->
-    <video autoplay loop muted playsinline id="background-video">
+    <video autoplay loop muted playsinline>
         <!-- 
           IMPORTANT: 
           Replace 'your-video-file.mp4' with the actual name and path of your video file.
@@ -44,15 +31,6 @@
         <source src="youth_rally_loop.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
-
-    <!-- Overlay content -->
-    <div class="flex flex-col items-center justify-center min-h-screen text-white text-center p-4">
-        <div class="bg-black bg-opacity-50 p-8 rounded-lg">
-            <h1 class="text-5xl font-bold mb-4"></h1>
-            <p class="text-xl text-gray-200"></p>
-        </div>
-    </div>
-
 </body>
 </html>
 
